@@ -1,0 +1,1 @@
+#R Script to create visual of US State Covid trend data
