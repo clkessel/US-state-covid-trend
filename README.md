@@ -1,6 +1,6 @@
 # R geom_tile() view of U.S. State COVID new cases over time
 
-In this code sample, we are going to explore the Center for Disease Control (CDC) "United States COVID-19 Cases and Deaths by State over Time" dataset.  The dataset is archived and hasn't been updated since October of 2022, but it does contain U.S. state COVID new case data from January 2020 - October 2022, which is sufficient for the purposes of this analysis.  At the end of this analysis, we hope to capture U.S. state new case trends over time in a single visual.
+In this code sample, we are going to explore the Center for Disease Control (CDC) "United States COVID-19 Cases and Deaths by State over Time" dataset.  The dataset can be found at the following URL, along with the numerous CDC data sets publically available: https://data.cdc.gov/browse.  The dataset is archived and hasn't been updated since October of 2022, but it does contain U.S. state COVID new case data from January 2020 - October 2022, which is sufficient for the purposes of this analysis.  At the end of this exploration, we hope to capture U.S. state new case trends over time in a single visual.
 
 I have the September 2022 data downloaded to a folder called 'data' in my R project folder.  I set the working directory, load the data, and examine its structure like this:
 
