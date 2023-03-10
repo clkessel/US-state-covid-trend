@@ -15,7 +15,7 @@ By examining the structure of the object, we can see it is a data frame with 2,1
 ```
 'data.frame':	60060 obs. of  15 variables
 ```
-|     variable       |                       structure                            |
+|     variable        |                       structure                            |
 |--------------------|------------------------------------------------------------|
 | $ submission_date: |chr  "03/11/2021" "12/01/2021" "01/02/2022" "11/22/2021" ...|
 | $ state          : |chr  "KS" "ND" "AS" "AL" ...|
