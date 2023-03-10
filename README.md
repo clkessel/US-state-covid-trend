@@ -17,7 +17,7 @@ By examining the structure of the object, we can see it is a data frame with 2,1
 ```
 |     variable        |                       structure                            |
 |---------------------|------------------------------------------------------------|
-| $ submission_date: |chr  "03/11/2021" "12/01/2021" "01/02/2022" "11/22/2021" ...|
+| $ submission_date:    |chr  "03/11/2021" "12/01/2021" "01/02/2022" "11/22/2021" ...|
 | $ state          : |chr  "KS" "ND" "AS" "AL" ...|
 | $ tot_cases      : |int  297229 163565 11 841461 251425 0 173 173967 0 602931 ...|
 | $ conf_cases     : |int  241035 135705 NA 620483 NA 0 NA 144788 NA NA ...|
