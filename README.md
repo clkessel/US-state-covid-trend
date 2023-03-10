@@ -1,10 +1,6 @@
-# R Exploratory Analysis of Government Employee Data
+# R geom_tile() view of U.S. State COVID new cases over time
 
-In this code sample, we are going to explore the U.S. Government's Office of Personnel Management (OPM) FedScope Employment Cube data set from September 2022 using R.  The data set is freely available as a .zip file and can be found here: https://www.opm.gov/data/index.aspx.  At the conclusion of this analysis, we hope to learn the following from the data:
-1) How many General Schedule (GS) government employees are there?
-2) What are the mean & median salaries of GS employees by grade?
-3) What is the distribution of GS employees by grade?
-4) What is the ratio of supervisor to non-supervisor employees?
+In this code sample, we are going to explore the Center for Disease Control (CDC) "United States COVID-19 Cases and Deaths by State over Time" dataset.  The dataset is archived and hasn't been updated since October of 2022, but it does contain U.S. state COVID new case data from January 2020 - October 2022, which is sufficient for the purposes of this analysis.  At the end of this analysis, we hope to capture U.S. state new case trends over time in a single visual.
 
 I have the September 2022 data downloaded to a folder called 'data' in my R project folder.  I set the working directory, load the data, and examine its structure like this:
 
