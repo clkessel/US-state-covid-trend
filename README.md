@@ -15,23 +15,23 @@ By examining the structure of the object, we can see it is a data frame with 2,1
 ```
 'data.frame':	60060 obs. of  15 variables
 ```
-|     variable        |                       structure                            |
-|---------------------|------------------------------------------------------------|
-| $ submission_date:    |chr  "03/11/2021" "12/01/2021" "01/02/2022" "11/22/2021" ...|
-| $ state          : |chr  "KS" "ND" "AS" "AL" ...|
-| $ tot_cases      : |int  297229 163565 11 841461 251425 0 173 173967 0 602931 ...|
-| $ conf_cases     : |int  241035 135705 NA 620483 NA 0 NA 144788 NA NA ...|
-| $ prob_cases     : |int  56194 27860 NA 220978 NA 0 NA 29179 NA NA ...|
-| $ new_case       : |int  0 589 0 703 0 0 14 667 0 1509 ...|
-| $ pnew_case      : |int  0 220 0 357 0 0 NA 274 0 0 ...|
-| $ tot_death      : |int  4851 1907 0 16377 1252 0 3 2911 0 8318 ...|
-| $ conf_death     : |int  NA NA NA 12727 NA 0 NA 2482 NA NA ...|
-| $ prob_death     : |int  NA NA NA 3650 NA 0 NA 429 NA NA ...|
-| $ new_death      : |int  0 9 0 7 0 0 0 8 0 6 ...|
-| $ pnew_death     : |int  0 0 0 3 0 0 NA 3 0 0 ...|
-| $ created_at     : |chr  "03/12/2021 03:20:13 PM" "12/02/2021 02:35:20 PM" "01/03/2022 03:18:16 PM" "11/22/2021 12:00:00 AM" ...|
-| $ consent_cases  : |chr  "Agree" "Agree" "" "Agree" ...|
-| $ consent_deaths : |chr  "N/A" "Not agree" "" "Agree" ...|
+|     variable             |                       structure                            |
+|--------------------------|------------------------------------------------------------|
+| $ submission_date:       |chr  "03/11/2021" "12/01/2021" "01/02/2022" "11/22/2021" ...|
+| $ state          :       |chr  "KS" "ND" "AS" "AL" ...|
+| $ tot_cases      :       |int  297229 163565 11 841461 251425 0 173 173967 0 602931 ...|
+| $ conf_cases     :       |int  241035 135705 NA 620483 NA 0 NA 144788 NA NA ...|
+| $ prob_cases     :       |int  56194 27860 NA 220978 NA 0 NA 29179 NA NA ...|
+| $ new_case       :       |int  0 589 0 703 0 0 14 667 0 1509 ...|
+| $ pnew_case      :       |int  0 220 0 357 0 0 NA 274 0 0 ...|
+| $ tot_death      :       |int  4851 1907 0 16377 1252 0 3 2911 0 8318 ...|
+| $ conf_death     :       |int  NA NA NA 12727 NA 0 NA 2482 NA NA ...|
+| $ prob_death     :       |int  NA NA NA 3650 NA 0 NA 429 NA NA ...|
+| $ new_death      :       |int  0 9 0 7 0 0 0 8 0 6 ...|
+| $ pnew_death     :       |int  0 0 0 3 0 0 NA 3 0 0 ...|
+| $ created_at     :       |chr  "03/12/2021 03:20:13 PM" "12/02/2021 02:35:20 PM" "01/03/2022 03:18:16 PM" "11/22/2021 12:00:00 AM" ...|
+| $ consent_cases  :       |chr  "Agree" "Agree" "" "Agree" ...|
+| $ consent_deaths :       |chr  "N/A" "Not agree" "" "Agree" ...|
 ### 1) How many General Schedule (GS) government employees are there?
 
 From the structur
