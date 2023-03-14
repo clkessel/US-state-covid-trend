@@ -103,7 +103,9 @@ covid_data %>% filter(new_case >= 0) %>%  ggplot(aes(x=format(submission_date, "
 
 ![image](https://user-images.githubusercontent.com/123432368/224873327-b861ce23-54f0-4444-99c5-b9fca09523b7.png)
 
+As you can see from the geom_tile layer, it is possible to see how new cases fluctuated over time while still preserving detail at the state level.  Obviously if specific counts of data is required, this plot alone will not suffice.  Lastly, I have added x-intercept plots for the two greatest peaks in new covid cases identified in the first line plot for December 2020 and January 2022.
 
+## I hope you enjoyed this brief look at new COVID cases at the state level using geom_tile, please see the analysis.R file for the complete code.
 
 
 
