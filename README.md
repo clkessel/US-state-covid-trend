@@ -58,6 +58,9 @@ Now if we examine the structure of this variable, we get a more useable format:
 str(covid_data$submission_date)
 Date[1:60060], format: "2021-03-11" "2021-12-01" "2022-01-02" "2021-11-22" "2022-05-30" "2020-05-17" "2020-04-03" "2021-09-04" "2021-05-09" ...
 ```
+
+The last variable we'll be dealing with is the new_case variable.  While it does contain occassional negative entries which indicate an update to previously reported new COVID cases, these should be included and will be added to the rest of the data when we aggregate on a monthly basis.  After considering that, we should be ready to move on to plotting.
+
 ### Finding a plot that works
 
 As we stated in the beginning, we are interested in seeing how new COVID cases trended at the state level over time.  A simple line plot most likely won't suffice, but we'll plot one just for reference.  First I update the dataframe by grouping by submission_date Month-Year combinations and summarize with new case totals.  Then I use ggplot for a simple line plot like this:
@@ -70,7 +73,7 @@ covid_data_line %>%  ggplot(aes(x=month, y=total, group=1)) + ggtitle("U.S. Covi
   scale_y_continuous(labels = comma) + geom_line()
 ```
 
-![image](https://user-images.githubusercontent.com/123432368/224869750-d98bf43b-ff97-4dad-b03f-8ddc8b00881d.png)
+![image](https://user-images.githubusercontent.com/123432368/224873083-eb8468a8-1f7e-4220-9dc3-e01624d6fd5a.png)
 
 
 As we suspected, while this graph does provide a good view of what amounts to new COVID cases for all 50 states, it doesn't provide any information on the individual states.  If we adjust our line plot slightly by incorporating states, we can get the next level of detail like this:
@@ -83,10 +86,23 @@ covid_data_lines %>%  ggplot(aes(x=month, y=total, color = state, group=state)) 
   scale_y_continuous(labels = comma) + geom_line()
 ```
 
-![image](https://user-images.githubusercontent.com/123432368/224870168-038266ae-e6be-411a-8878-99bf1974ff98.png)
+![image](https://user-images.githubusercontent.com/123432368/224873253-b03a495a-8c61-4cd4-a866-538ecbd921ac.png)
 
 
-While the above plot does provide information at the state level, with 50 individual line plots the detail gets lost in the quantity of data being presented.
+While the above plot does provide information at the state level, with 50 individual line plots the detail gets lost in the quantity of data being presented.  Ultimately what we care about is how new cases were trending, so an overall count isn't necessarily as important as it is to see increases and decreases at the state level in a single visual.  The geom_tile() layer, sometimes referred to as a "heatmap", provides a way to achieve the effect we want, and we can accomplish this with the following code:
+
+```
+covid_data %>% filter(new_case >= 0) %>%  ggplot(aes(x=format(submission_date, "%Y-%m"), y=state, fill=sqrt(new_case))) +
+  geom_tile(color = "black") + 
+  scale_x_discrete(position = "top") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), legend.position = "none") + 
+  guides(fill = guide_colourbar(barwidth = 20, barheight = .5)) +
+  xlab("") + ylab("") + ggtitle("U.S. Covid New Case by State (Jan 2020 - Oct 2022)") +
+  scale_fill_gradient(low = "#000099", high = "#FFFFFF") + geom_vline(xintercept = c("2020-12", "2022-01"), color = "red")
+```
+
+![image](https://user-images.githubusercontent.com/123432368/224873327-b861ce23-54f0-4444-99c5-b9fca09523b7.png)
+
 
 
 
